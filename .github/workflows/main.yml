@@ -1,0 +1,13 @@
+name: Deploy to Raspberry Pi
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Raspberry Pi
+        run: |
+          ssh pi@dmelin.se 'cd ~/var/www/dmelin.se/ && git pull --force origin main'
