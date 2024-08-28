@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Deploy to Raspberry Pi
         run: |
-          ssh pi@dmelin.se 'cd ~/var/www/dmelin.se/ && git pull --force origin main'
+          ssh pi@176.10.254.141 'cd ~/var/www/dmelin.se/ && git pull --force origin main'
